@@ -10,7 +10,7 @@ galleryDiv.addEventListener('click', onCardClick)
 function createGallary (galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
         return `<div class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
+  <a class="gallery__link" href="${original}">
     <img
       class="gallery__image"
       src="${preview}"
@@ -25,10 +25,16 @@ function createGallary (galleryItems) {
 }
 function onCardClick(event) {
     event.preventDefault();
-    if (evt.target.nodeName !== "IMG") {
+    if (event.target.tagName !== "IMG") {
         return
     } else {
-        console.log(event.target)
+      const instance = basicLightbox.create(`
+      <div class="modal">
+        <img scr="${event.target.dataset.source}" width="800" height="600">
+        <a>Close</a>
+    </div>`
+      )
+      instance.show();      
     }
 }
 
