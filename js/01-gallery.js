@@ -30,7 +30,7 @@ function onCardClick(event) {
     } else {
       const instance = basicLightbox.create(`
       <div class="modal">
-        <img scr="${event.target.dataset.source}" width="800" height="600">
+        <img src="${event.target.dataset.source}" width="800" height="600">
         <a>Close</a>
     </div>`
       )
