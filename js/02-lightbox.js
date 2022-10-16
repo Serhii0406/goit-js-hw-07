@@ -13,7 +13,6 @@ function createGallary (galleryItems) {
       class="gallery__image"
       src="${preview}"
       alt="${description}"
-      title="${description}"
     />
   </a>
 </div>`})
