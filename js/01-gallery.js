@@ -31,7 +31,6 @@ function onCardClick(event) {
       const instance = basicLightbox.create(`
       <div class="modal">
         <img src="${event.target.dataset.source}" width="800" height="600">
-        <a>Close</a>
     </div>`
       )
       instance.show();      
